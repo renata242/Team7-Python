@@ -1,0 +1,84 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'vendor/style.css' %}">
+<body>
+
+    <section class="search">
+      <div class="container">
+        <div class="search_input" align="right">
+          <input type="text" class="search_input_text" />
+
+        </div>
+        <br />
+
+        <h3>Your favourites</h3>
+        <br />
+        <div class="favorite_cards">
+          <div class="item">
+            <div class="image">
+              <img src="{% static 'img/aspirin.png" alt="" height="200px"  width="200px"/>
+            </div>
+            <div class="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
+              ac pellentesque massa purus.
+            </div>
+              <div class="cart_pht">
+                <img src="{% static 'img/image 1.svg'%}" alt="favorites"  />
+                <div class="cart">
+                  <p>-</p>
+                  <p>+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="item">
+            <div class="image">
+              <img src="{% static 'img/Rectangle 3.svg'%}" alt="" height="200px"  width="200px" />
+            </div>
+            <div class="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
+              ac pellentesque massa purus.
+            </div>
+            <div>
+              <div class="cart_pht">
+                <img src="{% static 'img/image 1.svg'%}" alt="favorites" />
+                <div class="cart">
+                  <p>-</p>
+                  <p>+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src="{% static 'img/Rectangle 3.svg'%}" alt="" height="200px"  width="200px" />
+            </div>
+            <div class="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
+              ac pellentesque massa purus.
+            </div>
+            <div>
+              <div class="cart_pht">
+                <img src="{% static 'img/image 1.svg'%}" alt="favorites" />
+                <div class="cart">
+                  <p>-</p>
+                  <p>+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+{% endblock %}
+

@@ -1,33 +1,35 @@
 {% extends 'main/base.html' %}
-
+{% load static %}
 {% block title %}
 Login
 {% endblock %}
 
 {% block content %}
 
-<body class="text-center">
-  <main class="form-signin">
-  <form>
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+<body>
+<link rel="stylesheet" href="{% static 'vendor/ds.css' %}">
+<div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
 
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
+    <div class="signup">
+        <form>
+            <label for="chk" aria-hidden="true">Sign up</label>
+            <input type="text" name="txt" placeholder="User name" required="">
+            <input type="email" name="email" placeholder="Email" required="">
+            <input type="password" name="pswd" placeholder="Password" required="">
+            <button>Sign up</button>
+        </form>
     </div>
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
+    <div class="login">
+        <form>
+            <label for="chk" aria-hidden="true">Login</label>
+            <input type="email" name="email" placeholder="Email" required="">
+            <input type="password" name="pswd" placeholder="Password" required="">
+            <button>Login</button>
+        </form>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-  </form>
-  </main>
+</div>
 </body>
 {% endblock %}
 
