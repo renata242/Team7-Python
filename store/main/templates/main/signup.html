@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+
+<body>
+<link rel="stylesheet" href="{% static 'vendor/ds.css' %}">
+<div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <div class="signup">
+        <form method="post" action="/signup">
+            <label for="chk" aria-hidden="true">Sign up</label>
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Enter your username" required="">
+            <input type="email" name="email" placeholder="Email" required="">
+            <input type="text" name="fname" placeholder="First Name" required="">
+            <input type="text" name="sname" placeholder="Second Name" required="">
+            <input type="date" name="dateofbrth" placeholder="Date of Birth" required="">
+            <input type="password" name="pass1" placeholder="Create a password" required="">
+            <input type="password" name="pass2" placeholder="Confirm password" required="">
+            <button type="submit">Sign up</button>
+            <a class="link" href="/login" >Already have an account?</a>
+        </form>
+    </div>
+
+
+</div>
+</body>
+{% endblock %}
+
