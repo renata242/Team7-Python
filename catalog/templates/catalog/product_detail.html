@@ -1,0 +1,31 @@
+{% extends 'catalog/catalog.html' %}
+{% load catalog_extras %}
+{% load static %}
+{% block title %}
+    {{ product.title }}
+{% endblock %}
+{% block catalog %}
+
+<body style="margin:0px;">
+    <table style="width:100%; border-collapse:collapse; font:14px Arial,sans-serif;">
+<tr style="height:170px;">
+
+    <td style="width:30%; padding:40px 10px 60px 90px; vertical-align: top;">
+
+              <img src="{{ product.image.url }}" width="120">
+
+    </td>
+    <td style="padding:30px; background-color:#f2f2f2; vertical-align:top;">
+       <h2>{{ product.title }} </h2>
+        <p>{{ product.description }}</p>
+        {% include 'add_to_cart.html' %}
+
+    </div>
+        </td>
+</tr>
+    </table>
+</body>
+
+{% endblock %}
+
+
