@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'fav',
     'contactus',
+    'chat',
+
+    'rest_framework',
 
     'mptt',
 ]

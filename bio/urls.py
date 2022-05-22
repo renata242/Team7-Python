@@ -29,6 +29,9 @@ urlpatterns = [
     path('contactus/', include('contactus.urls')),
     path('fav/', include('fav.urls')),
     path('account/', include('account.urls')),
+    path('', include('chat.urls')),
+
+
     path('', views.view_home, name='home')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
